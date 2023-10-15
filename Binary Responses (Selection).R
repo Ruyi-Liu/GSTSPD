@@ -5,7 +5,7 @@ library(preference)
 library(extraDistr)
 
 # number of iterations to compute average GSD sample size
-N_stopping <- 2000
+N_stopping <- 10000
 # number of iterations to compute empirical Type I error and empirical power
 N_error_rate <- 10000
 
