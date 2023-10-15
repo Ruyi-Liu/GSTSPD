@@ -373,7 +373,7 @@ stopping_sample_size_select <- function(num_loops,phi,theta,trt_diff,select_diff
   return(list(ret_stopping_size,ceiling(n),type1_error,GSD_power,fixed_type_1,fixed_power))
 }
 
-Selection_Difference <- seq(0.1,0.5,0.05)
+Selection_Difference <- seq(0.1,0.3,0.05)
 Seq_Size_Pocock_select <- c()
 Seq_Size_OF_select <- c()
 Fixed_Size_select <- c()
@@ -415,19 +415,6 @@ for (i in 1:length(Selection_Difference)){
 df_select<- cbind(Selection_Difference,Seq_Size_Pocock_select,Seq_Size_OF_select,
                   Fixed_Size_select,sd_lst_pocock,type1_pocock,power_pocock,sd_lst_OBF,type1_OBF,power_OBF,
                   fixed_type_1,fixed_power)
-
-Selection_Difference
-Seq_Size_Pocock_select
-Seq_Size_OF_select
-Fixed_Size_select
-sd_lst_pocock
-type1_pocock
-power_pocock
-sd_lst_OBF
-type1_OBF
-power_OBF
-fixed_type_1
-fixed_power
 
 df_select <- data.frame(df_select)
 colnames(df_select) <- c('Selection Difference', 'Pocock Sample Size', 'OBF Sample Size',
