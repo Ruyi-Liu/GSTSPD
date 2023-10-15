@@ -373,7 +373,7 @@ stopping_sample_size_prefer <- function(num_loops,phi,theta,trt_diff,select_diff
   return(list(ret_stopping_size,ceiling(n),type1_error,GSD_power,fixed_type_1,fixed_power))
 }
 
-Preference_Difference <- seq(0.1,0.5,0.05)
+Preference_Difference <- seq(0.1,0.3,0.05)
 Seq_Size_Pocock_prefer <- c()
 Seq_Size_OF_prefer <- c()
 Fixed_Size_prefer <- c()
